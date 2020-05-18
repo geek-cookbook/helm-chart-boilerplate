@@ -17,10 +17,14 @@ readme:
       body: |
         ## Installation
 
-        Clone the repo into your `.helm/starters` directory (possibly also `~/Library/helm/starters/` on MacOS):
-
+        Clone the repo into your `.helm/starters` directory:
         ```bash
         $ git clone https://github.com/geek-cookbook/helm-chart-starter ${HOME}/.helm/starters/geek-cookbook/chart
+        ```
+
+        Or on MacOS:
+         ```bash
+        $ git clone https://github.com/geek-cookbook/helm-chart-starter ${HOME}/Library/helm/starters/geek-cookbook
         ```
 
         ## Updates
@@ -49,10 +53,17 @@ readme:
 
         A list of the `__` placeholders and their intended purpose is below:
 
-        * `__NAME__`: The human readable name of the chart of the form `/A-Za-z-_ /` e.g. `Sitewards GmbH`
-        * `__CHART__`: The reference of the chart of the form `/a-z/` e.g. `linkerd`.
         * `__CONTAINER_NAME__`:  The name of the application container of the form `a-z` e.g. `kubectl`
         * `__CONTAINER_IMAGE__`: The image ref of the container to be used of the form `/a-z.\//-_` e.g. `quay.io/littlemanco/apache-php`
+        * `__CONTAINER_TAG__`
+        * `__AUTHOR_NAME__`
+        * `__AUTHOR_EMAIL__`
+        * `__AUTHOR_GITHUB_USERNAME__`
+        * `__LOGO_URL__`
+        * `__CONTAINER_PORT__`
+        * `__CONTAINER_PORT_PROTOCOL__`
+        * `__CONTAINER_PORT_NAME__`
+
 
         ## Development
 

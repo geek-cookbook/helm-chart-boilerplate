@@ -3,9 +3,9 @@
 # kind: "ClusterRoleBinding"
 # kind: "RoleBinding"
 metadata:
-  name: {{ template "__CHART__.fullname" . }}
+  name: {{ template "<CHARTNAME>.fullname" . }}
   labels:
-    app: {{ template "__CHART__.fullname" . }}
+    app: {{ template "<CHARTNAME>.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     heritage: "{{ .Release.Service }}"
     release: "{{ .Release.Name }}"

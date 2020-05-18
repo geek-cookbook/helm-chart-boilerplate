@@ -3,11 +3,11 @@ apiVersion: "extensions/v1beta1"
 kind: "DaemonSet"
 metadata:
   labels:
-    app: {{ template "__CHART__.fullname" . }}
+    app: {{ template "<CHARTNAME>.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     heritage: "{{ .Release.Service }}"
     release: "{{ .Release.Name }}"
-  name: {{ template "__CHART__.fullname" . }}
+  name: {{ template "<CHARTNAME>.fullname" . }}
 spec:
   template:
     metadata:
@@ -32,7 +32,7 @@ spec:
         # checksum/config: {{ include (print $.Chart.Name "/templates/secret.yaml") . | sha256sum }}
         # checksum/config: {{ include (print $.Chart.Name "/templates/configmap.yaml") . | sha256sum }}
       labels:
-        app: {{ template "__CHART__.fullname" . }}
+        app: {{ template "<CHARTNAME>.fullname" . }}
         release: "{{ .Release.Name }}"
     spec:
       ## Volumes are how Kubernetes expresses either networked storage or other metadata in the filesystem. There are
@@ -57,7 +57,7 @@ spec:
       ##
       #   - name: "__VOLUME_NAME__"
       #     persistentVolumeClaim:
-      #       claimName: {{ template "__CHART__.pvcName" . }}
+      #       claimName: {{ template "<CHARTNAME>.pvcName" . }}
       ##
       ## CONFIGMAP
       ##
